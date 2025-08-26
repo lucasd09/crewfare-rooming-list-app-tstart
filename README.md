@@ -6,8 +6,6 @@ Next.js frontend application designed to event management. Built with server sid
 
 Explore the deployed project:
 
-- **Live Demo** - [https://crewfare-rooming-list-panel.vercel.app/](https://crewfare-rooming-list-panel.vercel.app/)
-
 - **Backend Docs** - [https://crewfare-rooming-list-api.onrender.com/api](https://crewfare-rooming-list-api.onrender.com/api)
 
 ## Installation Steps ##
