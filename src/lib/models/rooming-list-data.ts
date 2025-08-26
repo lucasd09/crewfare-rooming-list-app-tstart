@@ -5,5 +5,5 @@ export type RoomingListData = {
   eventName: string;
   roomingCount: number;
   roomingLists: RoomingList[];
-  color?: string
+  color?: string;
 };

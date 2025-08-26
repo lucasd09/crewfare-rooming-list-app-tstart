@@ -1,6 +1,8 @@
-import * as React from "react"
+import * as React from "react";
 
-function DocumentView(props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) {
+function DocumentView(
+  props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>,
+) {
   return (
     <svg
       width={22}
@@ -19,7 +21,7 @@ function DocumentView(props: React.JSX.IntrinsicAttributes & React.SVGProps<SVGS
         fill="#4323FF"
       />
     </svg>
-  )
+  );
 }
 
-export default DocumentView
+export default DocumentView;

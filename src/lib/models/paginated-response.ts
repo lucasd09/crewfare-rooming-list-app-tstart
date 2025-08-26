@@ -6,4 +6,4 @@ export type PaginatedResponse<T> = {
   totalPages: number;
   hasNext: boolean;
   hasPrevious: boolean;
-}; 
+};
