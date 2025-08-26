@@ -2,18 +2,21 @@
 import { RoomingListCardProps } from "./types";
 import { AgreementButton } from "./components/agreement-button";
 import { useQuery } from "@tanstack/react-query";
-import { getBookingsByRoomingListId } from "./actions";
 import { dateFormat, uppercaseFirstLetter } from "@/lib/utils";
 import { DateRangeDisplay } from "./components/date-range-display";
 import { Card } from "../ui/card";
 import { Skeleton } from "../ui/skeleton";
 import { Button } from "../ui/button";
+import { getBookingsByRoomingListId } from "@/fn/get-bookings-by-rooming-list-id";
 
 export const RoomingListCard = ({ roomingList }: RoomingListCardProps) => {
 
   const { day: cutOffDay, month: cutOffMonth } = dateFormat(roomingList.cutOffDate);
 
-  const { data, isFetching } = useQuery({ queryKey: ["bookings", roomingList.roomingListId], queryFn: () => getBookingsByRoomingListId(roomingList.roomingListId) })
+  const { data, isFetching } = useQuery({
+    queryKey: ["bookings", roomingList.roomingListId],
+    queryFn: () => getBookingsByRoomingListId({ data: { id: roomingList.roomingListId } })
+  })
 
   const handleLogBookings = () => {
     console.table(data?.bookings);

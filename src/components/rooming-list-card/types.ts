@@ -1,4 +1,4 @@
-import { RoomingList } from "@/models/rooming-list";
+import { RoomingList } from "@/lib/models/rooming-list";
 
 export type RoomingListCardProps = {
   roomingList: RoomingList;
